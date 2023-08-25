@@ -1,0 +1,10 @@
+
+.vscode
+.idea
+
+*.log
+
+*.csr
+*.crt
+*.key
+*.pem
