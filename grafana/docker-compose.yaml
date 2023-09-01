@@ -33,7 +33,7 @@ services:
   prometheus:
     image: prom/prometheus:latest
     container_name: "prometheus"
-    # ports: [9090:9090]
+    ports: [9090:9090]
     networks: [monitor]
     volumes: [./prometheus.yaml:/etc/prometheus/prometheus.yml]
   grafana:

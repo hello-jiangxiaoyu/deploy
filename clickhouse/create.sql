@@ -3,11 +3,10 @@ CREATE DATABASE IF NOT EXISTS log;
 
 
 CREATE TABLE IF NOT EXISTS test_log (
-    msec                     	UInt32,
     time_iso8601            	Datetime,
     status                   	UInt32,
     request_method           	String,
-    request_uri              	String,
+    uri                       	String,
     remote_addr              	String,
     remote_port              	UInt32,
     server_addr              	String,
@@ -22,7 +21,7 @@ CREATE TABLE IF NOT EXISTS test_log (
     connection_requests     	UInt32,
     connection                 	UInt32,
     upstream                    String,
-    upstream_status             UInt32,
+    upstream_status             String,
     upstream_response_time      UInt32,
     upstream_response_length	UInt32,
     http_referer                String,
