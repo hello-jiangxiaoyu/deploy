@@ -36,9 +36,12 @@ services:
     container_name: "prometheus"
     ports: [9090:9090]
     networks: [monitor]
+    command: 
+      - --storage.tsdb.retention.time=3d
+      - --config.file=/etc/prometheus/prometheus.yaml
     volumes: 
       - /etc/localtime:/etc/localtime:ro
-      - ./grafana/prometheus.yaml:/etc/prometheus/prometheus.yml
+      - ./grafana/prometheus.yaml:/etc/prometheus/prometheus.yaml
   grafana:
     image: grafana/grafana
     container_name: "grafana"
